@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Time Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Staff Time Management</h1>
+        <div id="admin-section">
+            <h2>Admin Section</h2>
+            <input type="text" id="staffName" placeholder="Staff Name">
+            <input type="text" id="staffId" placeholder="Staff ID">
+            <button onclick="addStaff()">Add Staff</button>
+        </div>
+        <div id="manager-section">
+            <h2>Manager Section</h2>
+            <select id="staffSelect"></select>
+            <input type="time" id="startTime">
+            <input type="time" id="endTime">
+            <button onclick="recordTime()">Record Time</button>
+        </div>
+        <div id="records-section">
+            <h2>Records</h2>
+            <ul id="recordsList"></ul>
+            <button onclick="exportToExcel()">Export to Excel</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
